@@ -40,8 +40,8 @@ Berikut adalah beberapa tangkapan layar aplikasi:
 
 ### Umpan Balik
    Kami menghargai masukan dan saran Anda! Silakan:
-   **Ajukan issue di**: repository ini.
-   **Kirim email ke**: kiagusryshad@gmail.com
+1. **Ajukan issue di**: repository ini.
+2. **Kirim email ke**: kiagusryshad@gmail.com
    
 ### Kesimpulan
    Proyek ini mempermudah pengguna untuk memahami artikel panjang secara cepat. Dengan pengembangan lebih lanjut, aplikasi ini dapat diperluas untuk berbagai          keperluan lainnya.
