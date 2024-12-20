@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Artikel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        .error {
+            color: red;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleInput(mode) {
+            const urlInput = document.getElementById("url-input");
+            const textInput = document.getElementById("text-input");
+            if (mode === "url") {
+                urlInput.classList.remove("hidden");
+                textInput.classList.add("hidden");
+            } else if (mode === "text") {
+                urlInput.classList.add("hidden");
+                textInput.classList.remove("hidden");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Ringkasan Artikel</h1>
+    <form method="POST">
+        <label for="mode">Pilih Mode Input:</label><br>
+        <input type="radio" id="url" name="mode" value="url" onchange="toggleInput('url')" checked>
+        <label for="url">URL</label>
+        <input type="radio" id="text" name="mode" value="text" onchange="toggleInput('text')">
+        <label for="text">Teks</label>
 
+        <div id="url-input">
+            <label for="url">Masukkan URL Artikel:</label>
+            <input type="text" name="url" id="url" placeholder="https://contohartikel.com">
+        </div>
+
+        <div id="text-input" class="hidden">
+            <label for="input_text">Masukkan Teks untuk Dirangkum:</label>
+            <textarea name="input_text" id="input_text" placeholder="Masukkan teks panjang di sini"></textarea>
+        </div>
+
+        <button type="submit">Ringkas</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if summary %}
+        <h2>Hasil Ringkasan:</h2>
+        <textarea readonly>{{ summary }}</textarea>
+    {% endif %}
+</body>
+</html>
