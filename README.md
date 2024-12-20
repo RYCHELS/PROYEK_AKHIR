@@ -40,7 +40,7 @@ Berikut adalah beberapa tangkapan layar aplikasi:
 
 ### Umpan Balik
    Kami menghargai masukan dan saran Anda! Silakan:
-1. **Ajukan issue di**: repository ini.
+1. **Ajukan issue di**: [repository ini.](https://github.com/RYCHELS/PROYEK_AKHIR.git)
 2. **Kirim email ke**: kiagusryshad@gmail.com
    
 ### Kesimpulan
